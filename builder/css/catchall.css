@@ -1,0 +1,64 @@
+
+
+@media( max-device-width: 490px) {
+    body {
+        font-size: 2.4em;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#logo {
+    padding: 15px 0;
+    width: 100%;
+
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#9f0029), to(#760017));
+    background: -webkit-linear-gradient(#9f0029, #760017);
+    background: -moz-linear-gradient(#9f0029, #760017);
+    background: -ms-linear-gradient(#9f0029, #760017);
+    background: -o-linear-gradient(#9f0029, #760017);
+    background: linear-gradient(#9f0029, #760017);
+    background: #9f0029;
+}
+
+#logo img{
+    margin-left: 30px;
+}
+
+h1 {
+    color: #9f0029;
+    padding: 15px 30px;
+    font-size: 2.4em;
+    font-family: "Times New Roman", Times, Georgia, Serif;
+}
+
+p {
+    padding: 0 30px 15px 30px;
+    font-family: arial, sans-serif;
+}
+
+.link {
+    border: 1px solid #9c0028;
+    -webkit-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+
+    background: #9c0028;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cf7c90), color-stop(5%,#a70831), color-stop(71%,#9c0028), color-stop(95%,#a70831), color-stop(100%,#cf7c90)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #cf7c90 0%,#a70831 5%,#9c0028 71%,#a70831 95%,#cf7c90 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #cf7c90 0%,#a70831 5%,#9c0028 71%,#a70831 95%,#cf7c90 100%); /* Opera 11.10+ */
+    background: linear-gradient(to bottom,  #cf7c90 0%,#a70831 5%,#9c0028 71%,#a70831 95%,#cf7c90 100%); /* W3C */
+
+    color: #fff;
+    display: block;
+    font-family: "Times New Roman", Times, Georgia, Serif;
+    font-weight: bold;
+    padding: 10px 0;
+    margin-bottom: 15px;
+    text-align: center;
+    text-decoration: none;
+    width: 100%
+}

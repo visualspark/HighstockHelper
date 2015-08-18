@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="en-au" ID="tagHTML">
+<head id="Head1">
+    <title>Highcharts test</title>
+
+
+
+    <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="../framework/highstock.js"></script>
+    <script type="text/javascript" src="../framework/highcharts.exporting.js"></script>
+    <script type="text/javascript" src="jquery.plugin.highstockHelper.js"></script>
+
+    <script type="text/javascript">
+        $(function(){
+            $(".sampleChart").highstockHelper();
+
+            $("#addPoint").on("click", function(){
+                $(".sampleChart").trigger("chart.addPoint", { data: ["red",34.70]});
+            });
+
+            $("#addPointByID").on("click", function(){
+                $("#myChart").trigger("chart.addPoint", { data: [(new Date()).getTime(),50.70]});
+            });
+
+            $("#destroy").on("click", function(){
+                $(".kjcChart").trigger("chart.destroy");
+            });
+        });
+
+    </script>
+</head>
+<body>
+<button id="addPoint">Add Point to all</button>
+<button id="addPointByID">Add Point by targeting ID</button>
+<button id="destroy">Destroy</button>
+
+<div id="myChart"
+     class="sampleChart"
+     data-feed-url="jsonsample.json"
+     data-live-update="true"
+     data-title="Spot Prices per oz"
+     data-series-name="oz"></div>
+
+<hr>
+<br><br><br><br><br>
+<!--<div id="myChart2"-->
+     <!--class="sampleChart"-->
+     <!--data-feed-url="jsonsample.json"-->
+     <!--data-live-update="true"-->
+     <!--data-title="Spot Prices per oz"-->
+     <!--data-series-name="oz"></div>-->
+
+</body>
+</html>

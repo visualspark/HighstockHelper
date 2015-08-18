@@ -1,0 +1,85 @@
+/* Chart admin
+====================================*/
+#chartAdmin {
+    float: left;
+    margin: 30px; width: 250px;
+}
+#chartAdmin label {
+    display: block;
+    font-size: 1.2em;
+    padding: 0 0 15px 0;
+}
+
+#chartAdmin label span {
+    display: block;
+}
+
+#chartAdmin div label {
+    display: inline-block;
+    padding: 0 10px 5px 0;
+}
+
+#chartAdmin fieldset {
+    padding-bottom: 30px;
+    padding-top: 10px;
+}
+
+#chartAdmin legend{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#chartAdmin .row {
+    border-top: 1px solid #CCCCCC;
+    font-size: 1.2em;
+    padding: 10px 0;
+}
+
+#chartAdmin .row strong{ font-size: 1.2em}
+#chartAdmin #seriesList .row strong{ padding-right: 15px;}
+#chartAdmin .row label strong{ font-size: 1em}
+
+#chartAdmin .indent{ padding-left:40px}
+
+#chartAdmin input[type=text], #chartAdmin input[type=password], #chartAdmin textarea, #chartAdmin select {
+    background-color: #FFFFFF;
+    border: 1px solid #b5aea7;
+    padding: 3px;
+    width: 260px;
+
+    -moz-box-shadow: inset 0 0 4px 2px #DEDEDE;
+    -webkit-box-shadow: inset 0 0 4px 2px #DEDEDE;
+    box-shadow: inset 0 0 4px 2px #DEDEDE;
+}
+
+#chartAdmin textarea {
+    min-height: 100px;
+}
+
+#chartAdmin .yaxis2,
+#chartAdmin .post-load {
+    display: none;
+}
+
+#seriesListCont{ display: none;}
+
+/* Chart Preview
+====================================*/
+#chartPreview {
+    /* border: 1px solid #ccc; */
+    float: left;
+    margin-top: 40px;
+    margin-left: 40px;
+    min-width: 500px;
+    width: auto;
+    height: 400px;
+}
+
+/*
+#source {
+    color: #666;
+    font-size: 1.1em;
+    font-family: "Times New Roman", Times, Georgia, Serif;
+    padding: 10px;
+}
+*/

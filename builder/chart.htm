@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="en-au" ID="tagHTML">
+<head id="Head1">
+    <title>Chart object creator</title>
+    
+
+    <link rel="Stylesheet" type="text/css" href="css/catchall.css" />
+
+
+    <style type="text/css">
+        @import url("css/chart-admin.css");
+        
+        h1{color: #FFFFFF;
+            left: 280px;
+            position: absolute;
+            top: 60px;
+        }
+     </style>
+</head>
+<body> 
+
+<header><h1>Chart Testbed</h1></header>
+<!-- Options -->
+<div id="chartAdmin" class="clearfix">
+    <div class="scroll">
+        <fieldset>
+            <legend>Data</legend>
+            <label>
+                <span>Data</span>
+                <textarea id="csvData"></textarea>
+            </label>
+            <label>
+                <span>Data file location</span>
+                <input type="text" id="txtFileLocation" />
+            </label>
+             <label>Chart Type
+                <select id="chartType">
+                    <option value="area">Area</option>
+                    <option value="bar">Bar</option>
+                    <option value="column">Column</option> 
+                    <option value="line" selected="selected">Line</option>
+                    <option value="stock">Line - Time series</option>
+                </select>
+            </label>
+            <input id="enableData" class="post-load" type="button" value="Change Data"/>
+            <input id="loadData" type="button" value="Load Data"/>
+        
+        </fieldset>
+        <fieldset class="post-load">
+            <legend>Main Options</legend>
+            <label>
+                <span>Title</span>
+                <input type="text" id="txtTitle" />
+            </label>
+            <label>
+                <span>Source</span>
+                <input type="text" id="txtSource" />
+            </label>
+           
+            <label>Width
+                <select id="chartWidth">
+                    <option value="460" selected="selected">460px - 2column width</option>
+                    <option value="500">500px</option>
+                    <option value="550">550px</option>
+                    <option value="600">600px</option>
+                    <option value="650">650px</option>
+                    <option value="700">700px</option>
+                    <option value="750">750px</option>
+                    <option value="800">800px</option>
+                    <option value="850">850px</option>
+                    <option value="900">900px</option>
+                    <option value="940">940px - 1column width</option>
+                </select>
+            </label>
+            <label>
+                Rotate X axis by
+                 <select id="rotateXAxis">
+                    <option value="0" selected="selected">0 degrees (normal)</option>
+                    <option value="45">45 degrees</option>
+                    <option value="90">90 degrees</option> 
+                    
+                </select>
+            </label>
+        </fieldset>
+    
+        <fieldset class="post-load">
+            <legend>Axes</legend>
+            <div><label><input type="radio" name="y-axes" value="1" checked="checked" />1 y-Axis</label> <label><input type="radio" name="y-axes" value="2" />2 y-Axis</label></div>
+            <div class="row">
+                <label><strong>x-Axis</strong> Title</label> <input type="text" id="txtX-AxisTitle" />
+                <label><input type="checkbox" id="hideXaxisValues" /> Hide x-Axis Values</label>
+            </div>
+            <div class="row">
+                <label><strong>y-Axis 1</strong> Title</label> <input type="text" id="txtY-Axis1Title" />
+                <label><input type="checkbox" id="hideY1axisValues" /> Hide y-Axis 1 Values</label>
+            </div>
+            <div class="row yaxis2">
+                <label><strong>y-Axis 2</strong> Title</label> <input type="text" id="txtY-Axis2Title" />
+                <label><input type="checkbox" id="hideY2axisValues" /> Hide y-Axis 2 Values</label>
+            </div>
+        </fieldset>
+        <fieldset id="seriesListCont">
+            <legend>Series</legend>
+            <div id="seriesList"></div>
+        </fieldset>
+    </div>
+    <!-- / Scroll -->
+    
+    <input class="post-load" id="previewChart" type="button" value="Preview Chart" />
+    <input class="post-load" id="saveChart" type="button" value="Save Chart" />
+
+</div>
+<!-- / options -->
+
+<!-- Preview Area -->
+<div id="chartPreview">
+    <div id="chart" style="min-height: 430px"></div>
+    <label>
+        <strong>Chart Comments</strong><br/>
+        <textarea id="txtComments" style="width: 500px; height: 130px;"></textarea>
+    </label>
+</div>
+<!-- / Preview Area -->
+
+<script type="text/javascript" src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../framework/highstock.js"></script>
+<script type="text/javascript" src="../framework/highcharts.exporting.js"></script>
+<script type="text/javascript" src="chart.handler.js"></script>
+<script type="text/javascript" src="chart.builder.js"></script>
+</body>
+</html>
