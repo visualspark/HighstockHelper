@@ -15,7 +15,7 @@
             $(".sampleChart").highstockHelper();
 
             $("#addPoint").on("click", function(){
-                $(".sampleChart").trigger("chart.addPoint", { data: ["red",34.70]});
+                $(".sampleChart").trigger("chart.addPoint", { data: [(new Date()).getTime(),34.70]});
             });
 
             $("#addPointByID").on("click", function(){
@@ -24,7 +24,7 @@
             });
 
             $("#destroy").on("click", function(){
-                $(".kjcChart").trigger("chart.destroy");
+                $(".sampleChart").trigger("chart.destroy");
             });
         });
 
