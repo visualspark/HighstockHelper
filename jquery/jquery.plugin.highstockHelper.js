@@ -9,6 +9,7 @@
  * @version 1.0
  * @description plugin for chart reuse. Also provides an API into HighStock for some common methods and initalises the theme once
  * @example <div id="myChart" class="sampleChart" data-feed-url="jsonsample.json" data-live-update="true" data-title="Spot Prices per oz" data-series-name="oz"></div>
+ * @url https://github.com/visualspark/HighstockHelper
  */
 
 ;(function ( $, Highcharts ) {

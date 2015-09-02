@@ -6,7 +6,7 @@ jQuery wrapper plugin to make highstock chart creation quicker
 <div id="specialChart"
      class="sampleChart"
      data-feed-url="jsonsample.json"
-     data-live-update="true"
+     data-live-update="path/to/server"
      data-title="Spot Prices per oz"
      data-series-name="oz"></div>
 ```
@@ -24,15 +24,15 @@ $(".sampleChart").highstockHelper({isLazy:true});
 
 for adding a single point
 ```
-$(".sampleChart").trigger("chart.addPoint", { data: ["red",34.70]});
+$(".sampleChartTarget").trigger("chart.addPoint", { data: [(new Date()).getTime(),50.70]});
 ```
 
 **recreate** chart as a whole
 ```
-$("#specialChart").trigger("chart.recreate");
+$(".sampleChartTarget").trigger("chart.recreate");
 ```
 
 and **destroy** instance
 ```
-$(".kjcChart").trigger("chart.destroy");
+$(".sampleChartTarget").trigger("chart.destroy");
 ```
