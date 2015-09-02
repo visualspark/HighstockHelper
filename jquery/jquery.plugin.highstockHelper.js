@@ -236,9 +236,9 @@
 
         function _getChartData(){
             // Kill an active instance if it already exists
-            if( typeof base.chart !== "undefined") {
-                base.chart.destroy();
-                base.chart = null;
+            if( typeof base._hs !== "undefined") {
+                base._hs.destroy();
+                base._hs = null;
             }
 
             $.get(base.options.feedUrl, function(data){
@@ -256,7 +256,7 @@
                     chart:{renderTo:document.getElementById(base.options.id)}
                 }
 
-                base.chart = new hc.StockChart(ops);
+                base._hs = new hc.StockChart(ops);
             });
         }
 
@@ -267,7 +267,9 @@
          */
         function _destroy(){
             console.log("destroy triggered");
-            base.chart.destroy();
+            if( typeof base._hs !== "undefined") {
+                base._hs.destroy();
+            }
 
             // clear out custom events
             base.$el.off("chart.addPoint");
@@ -287,7 +289,7 @@
          * @private
          */
         function _addPoint (e, point){
-            var series = base.chart.series[0]
+            var series = base._hs.series[0]
                 , timeTest;
 
             // make sure we have 2 values
